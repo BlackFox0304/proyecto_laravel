@@ -25,8 +25,15 @@ class ContactoController extends Controller
 
     public function guardarFormulario(Request $request)
     {
-        //Recibir datos
+        //Recibir datos //mediante $request
+
         //validar datos
+        $request->validate([
+            'nombre' => 'required',
+            'correo' => 'required|email',
+            'mensaje' => ['required', 'min:10'],
+        ]);
+
         //guardar datos
         $contacto = new Contacto();
         $contacto->nombre = $request->nombre;
