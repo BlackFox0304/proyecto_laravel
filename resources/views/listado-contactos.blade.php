@@ -24,7 +24,7 @@
             <tr>
                 <td>{{$mensaje ->nombre }}</td>
                 <td>{{$mensaje ->correo }}</td>
-                <td>{{$mensaje ->mensaje }}</td>
+                <td>{{$mensaje ->mensaje}}</td>
                 <td>{{$mensaje ->estatus}}</td>
             </tr>
             @endforeach

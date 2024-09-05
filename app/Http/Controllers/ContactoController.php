@@ -38,7 +38,7 @@ class ContactoController extends Controller
         $contacto = new Contacto();
         $contacto->nombre = $request->nombre;
         $contacto->correo = $request->correo;
-        $contacto->mensaje = $request->correo;
+        $contacto->mensaje = $request->mensaje;
         $contacto->save();
 
         return redirect('/contacto');
