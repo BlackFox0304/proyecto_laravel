@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contacto;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
 
@@ -18,9 +19,9 @@ class ContactoController extends Controller
         //return view('/listado-contactos', ['mensajes' => Contacto::all()]);
     }
 
-    public function formularioContacto()
+    public function formularioContacto($tipo_usuario  = null)
     {
-        return view('contacto');
+        return view('contacto', compact('tipo_usuario'));
     }
 
     public function guardarFormulario(Request $request)
